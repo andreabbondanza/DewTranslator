@@ -49,6 +49,14 @@ export default class Italian extends DewDictionary
 }
 ```
 
+### Change dictionary in runtime
+You can also change dictionary in runtime by this way:
+```typescript
+click(){
+    this.$translator.changeDictionary(new EnglishDictionary()); // just imagine an english dictionary like above
+}
+```
+
 ## Know Issues
 
 

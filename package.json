@@ -2,10 +2,16 @@
   "name": "dewtranslator",
   "version": "1.0.0",
   "description": "A simple localization plugin for vuejs",
-  "main": "index.js",
+  "main": "lib/translator.js",
+  "types": "lib/translator.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -18,6 +24,9 @@
     "javascript",
     "localization"
   ],
+  "files": [
+    "lib/**/*"
+  ],
   "author": "Andrea Vincenzo Abbondanza",
   "license": "MIT",
   "bugs": {
@@ -28,6 +37,9 @@
     "vue": "^2.5.17"
   },
   "devDependencies": {
-    "typescript": "3.2.2"
+    "typescript": "3.2.2",
+    "prettier": "1.15.3",
+    "tslint": "5.11.0",
+    "tslint-config-prettier": "1.17.0"
   }
 }

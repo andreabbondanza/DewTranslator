@@ -35,8 +35,8 @@ declare module 'vue/types/vue' {
   }
 }
 
-export default function DewTranslatorPlugin<T extends DewTranslator>(vue: typeof _Vue, options?: T): void {
+export default function DewTranslatorPlugin<T extends DewTranslator>(vue: typeof _Vue, options?: T): void
+{
   vue.prototype.$translator = options;
 }
-
 export { DewDictionary as DewDictionary };

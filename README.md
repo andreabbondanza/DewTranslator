@@ -1,2 +1,2 @@
-# dewdictionary
+# Dew Translator
 Typescript vue localization plugin

@@ -1,6 +1,6 @@
 {
   "name": "dewtranslator",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A simple localization plugin for vuejs",
   "main": "lib/translator.js",
   "types": "lib/translator.d.ts",

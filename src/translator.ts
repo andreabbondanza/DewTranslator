@@ -1,4 +1,4 @@
-import Vue from 'vue';
+import _Vue from 'vue';
 import DewDictionary from './dictionary';
 export class DewTranslator {
   private dictionary: DewDictionary;
@@ -7,12 +7,12 @@ export class DewTranslator {
     this.dictionary = dictionary;
     this.locale = this.dictionary.tag;
   }
-  public getString(key: string, values: any[]) {
+  public getString(key: string, values: string[]) {
     if (values === undefined) {
       values = [];
     }
     let temp = this.dictionary.getDictionary().get(key) !== undefined ? this.dictionary.getDictionary().get(key) : key;
-    if (values.length <= 0) {
+    if (values.length > 0) {
       temp = this.dictionary.getDictionary().get(key) !== undefined ? this.dictionary.getDictionary().get(key) : key;
       for (const element of values) {
         if (temp !== undefined) {
@@ -35,6 +35,8 @@ declare module 'vue/types/vue' {
   }
 }
 
-export default function DewTranslatorPlugin(vue: typeof Vue, options: DewTranslator): void {
+export default function DewTranslatorPlugin<T extends DewTranslator>(vue: typeof _Vue, options?: T): void {
   vue.prototype.$translator = options;
 }
+
+export { DewDictionary as DewDictionary };

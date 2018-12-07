@@ -4,7 +4,8 @@
   "description": "A simple localization plugin for vuejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,9 @@
   },
   "homepage": "https://github.com/andreabbondanza/DewTranslator#readme",
   "dependencies": {
-    "typescript": "^3.2.2"
+    "vue": "^2.5.17"
+  },
+  "devDependencies": {
+    "typescript": "3.2.2"
   }
 }

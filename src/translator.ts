@@ -20,8 +20,9 @@ export class DewTranslator
     return this.dictionary.getDictionary().get(key) !== undefined ? this.dictionary.getDictionary().get(key) : key;
   }
   /**
-   * Get a formatted string from dictionary
+   * Get a formatted string from dictionary, it use {n} placeholders
    * @param key - The string key to find with values
+   * @param values - The array with string to fill the placeholders
    * @returns The key with values if not found or the value of the key in dictionary with values
    */
   public getStringF(key: string, values: string[])

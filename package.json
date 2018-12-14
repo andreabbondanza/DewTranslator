@@ -1,6 +1,6 @@
 {
   "name": "dewtranslator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "markdown": "github",
   "description": "A simple localization plugin for vuejs",
   "main": "lib/translator.js",

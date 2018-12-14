@@ -25,7 +25,7 @@ In your components just do
   <div>
         <h1>{{$translator.getString(`Hello`)}}</h1> // --> In dictionary Hello is 'Ciao', so it will print 'Ciao'
         <h1>{{$translator.getString(`Halo`)}}</h1> // --> In dictionary Halo doesn't exists, so it will print 'Halo?
-        <h2>{{$translator.getString(`Your name is {0} {1}`, ['Carriage','Kato'])}}</h2> // -> This will print 'Your name is Carriage Kato' or if there is an equivalent in dictionary, for example: 'Il tuo nome è Carriage Kato'
+        <h2>{{$translator.getStringF(`Your name is {0} {1}`, ['Carriage','Kato'])}}</h2> // -> This will print 'Your name is Carriage Kato' or if there is an equivalent in dictionary, for example: 'Il tuo nome è Carriage Kato'
   </div>
 ```
 

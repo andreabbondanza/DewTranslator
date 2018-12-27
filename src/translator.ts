@@ -15,9 +15,9 @@ export class DewTranslator
    * @param key - The string key to find
    * @returns The key if not found or the value of the key in dictionary
    */
-  public getString(key: string)
+  public getString(key: string) : string
   {
-    return this.dictionary.getDictionary().get(key) !== undefined ? this.dictionary.getDictionary().get(key) : key;
+    return this.dictionary.getDictionary().get(key) !== undefined ? this.dictionary.getDictionary().get(key) + '' : key;
   }
   /**
    * Get a formatted string from dictionary, it use {n} placeholders
@@ -25,7 +25,7 @@ export class DewTranslator
    * @param values - The array with string to fill the placeholders
    * @returns The key with values if not found or the value of the key in dictionary with values
    */
-  public getStringF(key: string, values: string[])
+  public getStringF(key: string, values: string[]) : string
   {
     if (values === undefined)
     {
@@ -43,7 +43,7 @@ export class DewTranslator
         }
       }
     }
-    return temp;
+    return temp + '';
   }
   /**
    * Change in runtime the dictionary
